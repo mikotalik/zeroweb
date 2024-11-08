@@ -15,7 +15,7 @@ body{
 .content{
     position: absolute;
     
-    width: 42%;
+    width: 50%;
     height: 100%;
 
     padding: 4%;
@@ -23,50 +23,30 @@ body{
     background-color: white;
 }
 
-.heading{
+.text-big{
     display:block;
     width:100%;
     height: auto;
 
-    font-size: 90px;
+    font-size: 64px;
 
-    text-align: center;
-
+    margin-top: 10%;
 }
 
-.text{
+.text-medium{
     display:block;
 
     width:100%;
     height: auto;
 
-    margin-top: 10%;
+    margin-top: 5%;
 
-    font-size: 28px;
-
-    text-align: center;
+    font-size: 24px;
 }
 
-.button{
-    display:block;
-
-    width:fit-content;
-    height: auto;
-
-    margin: 0 auto;
-    margin-top: 10%;
-
-    align-self: center;
-
-    font-size: 28px;
-
-    border: 2px solid white;
-
-    padding: 10px;
-    padding-left: 15px;
-    padding-right: 15px;
-
-    text-align: center;
+a{
+    display: inline-block;
+    width: auto;
 }
 
 .grid{
@@ -83,9 +63,13 @@ body{
     background-repeat: repeat;
     background-size: 50%;
 
-    filter: brightness(1.0);
+    
 
     z-index: -1;
+}
+
+.logo{
+    display: block;
 }
 
 model-viewer{

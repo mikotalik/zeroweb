@@ -1,31 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zero</title>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/icon.png" type="image/svg+xml">
 
     <script type="module" src="libs/model-viewer.min.js"></script>
+
 </head>
 
 <body>
     <div class="content">
-        <div class="heading">ZERO</div>
 
-        <div class="text">Smart goggles running web apps. <br> <br>
-            A minimap for walking the streets, a screen to watch videos. A shopping list for groceries, a translator for travelling. <br> <br>
-            Dual AR display, camera, microphone, speakers, battery. <br> <br> <br> <br>
-            
+        <img src="images/zero_logo-black.svg" class="logo" width="120px">
+
+        <div class="text-big">Glasses running web apps</div>
+
+        <div class="text-medium">
+            ZERO are AR glasses that let you run web apps directly in your field of view. Stay hands-free, navigate
+            apps with a glance.
+            <br>
+            <br>
+            Enjoy the existing web ecosystem, or build your own apps in minutes.
+            <br><br>
+            More details coming soon
+            <br> <br>
+
         </div>
 
-        <div class="button">Join the waitlist</div>
+        <a class="text-medium"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSd5kNit7IlWsMQWwcSM0sbBWoNq7sbJ2DYGNMDNj1tMf9wgeg/viewform?usp=sf_link">Join
+            the waitlist</a>
 
     </div>
 
     <div class="grid"></div>
-    <model-viewer src="models/zero.glb" ar ar-modes="scene-viewer quick-look webxr" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1.47" shadow-softness="1"></model-viewer>
-    
+    <model-viewer src="models/zero.glb" ar ar-modes="scene-viewer quick-look webxr" tone-mapping="neutral"
+        poster="images/poster.webp" camera-orbit="24.12deg 106.4deg 536.7m" interpolation-decay="200"></model-viewer>
+
+    <script src="main.js"></script>
 </body>
+
 </html>
