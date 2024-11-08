@@ -96,6 +96,10 @@ model-viewer{
         margin-bottom: 10vw;
     }
 
+    .text-medium{
+        font-size: 5vw;
+    }
+
     model-viewer{
         position: absolute;
 
