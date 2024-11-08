@@ -15,10 +15,10 @@ body{
 .content{
     position: absolute;
     
-    width: 50%;
-    height: 100%;
+    width: 42vw;
+    height: 92vh;
 
-    padding: 4%;
+    padding: 4vw;
 
     background-color: white;
 }
@@ -78,4 +78,44 @@ model-viewer{
 
     width:70%;
     height:100%;
+}
+
+@media (max-width: 768px) {
+
+    .content {
+        width:92vw;
+        height:50vh;
+    }
+
+    .logo {
+        width: 80px;
+    }
+
+    .text-big {
+        font-size: 6vw;
+        margin-bottom: 10vw;
+    }
+
+    model-viewer{
+        position: absolute;
+
+        top:50vh;
+        left:0px;
+    
+        width:100vw;
+        height:50vh;
+    }
+
+    .grid{
+        position: absolute;
+
+        top:50vh;
+        left:0px;
+    
+        width:100vw;
+        height:50vh;
+
+        display: none;
+    }
+
 }
