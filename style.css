@@ -108,6 +108,8 @@ model-viewer{
     
         width:100vw;
         height:50vh;
+
+        pointer-events: none;
     }
 
     .grid{
