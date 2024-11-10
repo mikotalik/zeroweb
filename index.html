@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Zero</title>
 
     <link rel="stylesheet" href="style.css">
@@ -18,10 +18,10 @@
 
         <img src="images/zero_logo-black.svg" class="logo" width="120px">
 
-        <div class="text-big">The glasses running web apps</div>
+        <div class="text-big">The <span class="blue-text">glasses</span> running <span class="blue-text">web apps</span></div>
 
         <div class="text-medium">
-            ZERO are AR glasses that let you run web apps directly in your field of view. Stay hands-free, navigate
+            ZERO glasses let you run web apps directly in your field of view. Stay hands-free, navigate
             apps with a glance.
             <br>
             <br>
@@ -38,9 +38,13 @@
 
     </div>
 
-    <div class="grid"></div>
-    <model-viewer src="models/zero.glb" ar ar-modes="scene-viewer quick-look webxr" tone-mapping="neutral"
-        poster="images/poster.webp" camera-orbit="24.12deg 106.4deg 536.7m" interpolation-decay="200"></model-viewer>
+
+    <model-viewer src="models/zero.glb" tone-mapping="neutral"
+        poster="images/poster.webp" camera-orbit="24.12deg 106.4deg 536.7m" interpolation-decay="200">
+        
+    </model-viewer>
+
+    <div class="dot-grid"></div>
 
     <script src="main.js"></script>
 </body>

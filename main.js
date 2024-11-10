@@ -4,5 +4,7 @@ onmousemove = (e) => {
     const x = e.pageX
     const y = e.pageY
 
-    preview.setAttribute("camera-orbit", (24 + x*-0.01) + "deg" + (106 + y*-0.01) + "deg" + "490m")
+    let scale = 2560/innerWidth
+
+    preview.setAttribute("camera-orbit", (24 + x*-0.01) + "deg" + (112 + y*-0.01) + "deg" + (450*scale) + "m")
 }

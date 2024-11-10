@@ -1,42 +1,63 @@
-*{
+@font-face {
+    font-family: 'IBMPlexSans-Light';
+    src: url('/fonts/IBMPlexSans-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'IBMPlexSans-Semibold';
+    src: url('/fonts/IBMPlexSerif-SemiBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
     margin: 0;
     border: none;
 
+    font-family: 'IBMPlexSans-Light';
+
     color: black;
+
+    overflow: hidden;
 }
 
-body{
+body {
     width: 100vw;
     height: 100vh;
 
     overflow: hidden;
 }
 
-.content{
+.content {
     position: absolute;
-    
+
     width: 42vw;
     height: 92vh;
 
     padding: 4vw;
 
+    text-overflow: ellipsis;
+
     background-color: white;
 }
 
-.text-big{
-    display:block;
-    width:100%;
+.text-big {
+    display: block;
+    width: 100%;
     height: auto;
 
     font-size: 64px;
+    font-family: IBMPlexSans-Semibold;
 
     margin-top: 10%;
 }
 
-.text-medium{
-    display:block;
+.text-medium {
+    display: block;
 
-    width:100%;
+    width: 100%;
     height: auto;
 
     margin-top: 5%;
@@ -44,18 +65,18 @@ body{
     font-size: 24px;
 }
 
-a{
+a {
     display: inline-block;
     width: auto;
 }
 
-.grid{
+.grid {
     position: absolute;
-    left:50%;
-    top:0%;
+    left: 50%;
+    top: 0%;
 
-    width:200%;
-    height:200%;
+    width: 200%;
+    height: 200%;
 
     background-color: #17181A;
 
@@ -63,28 +84,59 @@ a{
     background-repeat: repeat;
     background-size: 50%;
 
-    
+    overflow: hidden;
 
     z-index: -1;
 }
 
-.logo{
+.logo {
     display: block;
 }
 
-model-viewer{
+model-viewer {
     position: absolute;
-    left:50%;
+    left: 25%;
 
-    width:70%;
-    height:100%;
+    width: 100%;
+    height: 100%;
+
+    overflow:hidden;
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+.dot-grid {
+    position: absolute;
+
+    top: 0;
+    left: 50%;
+
+    width: 50%;
+    height: 100%;
+
+    background-color: #17181A;
+    background-image: radial-gradient(#2f2f31 2px, transparent 2px);
+    background-size: 28px 28px;
+    /* Adjust to control spacing */
+
+    pointer-events: none;
+
+    z-index: -2 !important;
+}
+
+.blue-text{
+
+    font-family: IBMPlexSans-Semibold;
+    color: #0035ab;
 }
 
 @media (max-width: 768px) {
 
     .content {
-        width:92vw;
-        height:50vh;
+        width: 92vw;
+        height: 60vh;
     }
 
     .logo {
@@ -96,32 +148,33 @@ model-viewer{
         margin-bottom: 10vw;
     }
 
-    .text-medium{
+    .text-medium {
         font-size: 5vw;
     }
 
-    model-viewer{
+    model-viewer {
         position: absolute;
 
-        top:50vh;
-        left:0px;
-    
-        width:100vw;
-        height:50vh;
+        top: 60vh;
+        left: 0px;
 
-        pointer-events: none;
+        width: 100vw;
+        height: 40vh;
+
+        z-index: -1;
     }
 
-    .grid{
+    .dot-grid {
         position: absolute;
 
-        top:50vh;
-        left:0px;
-    
-        width:100vw;
-        height:50vh;
+        top: 50vh;
+        left: 0px;
 
-        display: none;
+        width: 100vw;
+        height: 50vh;
+
+
+        visibility: hidden;
     }
 
 }
