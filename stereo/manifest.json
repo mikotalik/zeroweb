@@ -3,6 +3,7 @@
   "short_name": "Stereo",
   "start_url": ".",
   "display": "standalone",
+  "display_override": ["window-controls-overlay"],
   "icons": [
     {
       "src": "icon-192.png",
