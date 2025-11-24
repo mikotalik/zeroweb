@@ -5,6 +5,11 @@ const right = document.getElementById("right")
 const scale = document.getElementById('scale')
 const scaleValue = document.getElementById("scale-value")
 
+const vertical = document.getElementById('vertical')
+const verticalValue = document.getElementById("vertical-value")
+
+const flip = document.getElementById('flip')
+
 surface.onclick = () => {
   if (document.fullscreenElement) {
     document.exitFullscreen()
@@ -58,3 +63,23 @@ scale.addEventListener('input', () => {
   scaleValue.textContent = value + '%'
 })
 
+scaleValue.textContent = scale.value + '%'
+
+vertical.addEventListener('input', () => {
+  const value = vertical.value
+
+  //left.style.transform = ""
+  //right.style.backgroundSize = value + '%'
+
+  verticalValue.textContent = value + '%'
+})
+
+flip.addEventListener('change', () => {
+  if (flip.checked) {
+    left.style.transform = "scaleX(-1)"
+    right.style.transform = "scaleX(-1)"
+  } else {
+    left.style.transform = "scaleX(1)"
+    right.style.transform = "scaleX(1)"
+  }
+})
