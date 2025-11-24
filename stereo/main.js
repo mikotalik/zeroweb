@@ -55,31 +55,30 @@ surface.addEventListener('drop', e => {
 scaleValue.textContent = scale.value + '%'
 
 scale.addEventListener('input', () => {
-  const value = scale.value
 
-  left.style.backgroundSize = value + '%'
-  right.style.backgroundSize = value + '%'
+  left.style.backgroundSize = scale.value + '%'
+  right.style.backgroundSize = scale.value + '%'
 
-  scaleValue.textContent = value + '%'
+  scaleValue.textContent = scale.value + '%'
 })
 
-scaleValue.textContent = scale.value + '%'
+verticalValue.textContent = vertical.value + '%'
 
 vertical.addEventListener('input', () => {
-  const value = vertical.value
 
-  //left.style.transform = ""
-  //right.style.backgroundSize = value + '%'
+  left.style.transform = "scaleX(" + negativeBoolean(flip.value) + ")" + " translateY(" + vertical.value + "%)"
+  right.style.transform = "scaleX(" + negativeBoolean(flip.value) + ")" + " translateY(" + -vertical.value + "%)"
 
   verticalValue.textContent = value + '%'
 })
 
 flip.addEventListener('change', () => {
-  if (flip.checked) {
-    left.style.transform = "scaleX(-1)"
-    right.style.transform = "scaleX(-1)"
-  } else {
-    left.style.transform = "scaleX(1)"
-    right.style.transform = "scaleX(1)"
-  }
+
+  left.style.transform = "scaleX(" + negativeBoolean(flip.value) + ")" + " translateY(" + vertical.value + "%)"
+  right.style.transform = "scaleX(" + negativeBoolean(flip.value) + ")" + " translateY(" + -vertical.value + "%)"
+
 })
+
+function negativeBoolean(value) {
+  return value ? 1 : -1
+}
