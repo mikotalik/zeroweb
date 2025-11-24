@@ -52,8 +52,6 @@ surface.addEventListener('drop', e => {
   reader.readAsDataURL(file)
 })
 
-scaleValue.textContent = scale.value + '%'
-
 scale.addEventListener('input', () => {
 
   left.style.backgroundSize = scale.value + '%'
@@ -62,20 +60,18 @@ scale.addEventListener('input', () => {
   scaleValue.textContent = scale.value + '%'
 })
 
-verticalValue.textContent = vertical.value + '%'
-
 vertical.addEventListener('input', () => {
 
-  left.style.transform = "scaleX(" + negativeBoolean(flip.value) + ")" + " translateY(" + vertical.value + "%)"
-  right.style.transform = "scaleX(" + negativeBoolean(flip.value) + ")" + " translateY(" + -vertical.value + "%)"
+  left.style.transform = "scaleX(" + negativeBoolean(flip.checked) + ")" + " translateY(" + vertical.value + "%)"
+  right.style.transform = "scaleX(" + negativeBoolean(flip.checked) + ")" + " translateY(" + -vertical.value + "%)"
 
   verticalValue.textContent = value + '%'
 })
 
 flip.addEventListener('change', () => {
 
-  left.style.transform = "scaleX(" + negativeBoolean(flip.value) + ")" + " translateY(" + vertical.value + "%)"
-  right.style.transform = "scaleX(" + negativeBoolean(flip.value) + ")" + " translateY(" + -vertical.value + "%)"
+  left.style.transform = "scaleX(" + negativeBoolean(flip.checked) + ")" + " translateY(" + vertical.value + "%)"
+  right.style.transform = "scaleX(" + negativeBoolean(flip.checked) + ")" + " translateY(" + -vertical.value + "%)"
 
 })
 
