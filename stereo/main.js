@@ -65,7 +65,7 @@ vertical.addEventListener('input', () => {
   left.style.transform = "scaleX(" + negativeBoolean(flip.checked) + ")" + " translateY(" + vertical.value + "%)"
   right.style.transform = "scaleX(" + negativeBoolean(flip.checked) + ")" + " translateY(" + -vertical.value + "%)"
 
-  verticalValue.textContent = value + '%'
+  verticalValue.textContent = vertical.value + '%'
 })
 
 flip.addEventListener('change', () => {
